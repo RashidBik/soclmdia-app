@@ -1,0 +1,18 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: aliceblue;
+    text-align: center;
+    font-size: large;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item-1{
+    flex-grow: 2;
+}
