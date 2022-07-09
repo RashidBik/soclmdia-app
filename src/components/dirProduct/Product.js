@@ -1,12 +1,13 @@
 import React from 'react'
+import './delPstyle.css'
 
  function Product({products,onDelete}) {
     return (
     <div className='box'>
-        <div>{`Author: ${products.author}`}</div>
+        <span>{` ${products.author}`}</span>
         <h1>{products.name}</h1>
-        <div>{`Qoute: ${products.qoute}`}</div>
-        <button onClick={()=>onDelete(products.id)}>Delete</button>
+        <div>{products.qoute}</div>
+        <button className='btn' onClick={()=>onDelete(products.id)}>Delete</button>
     </div>
   )
 }

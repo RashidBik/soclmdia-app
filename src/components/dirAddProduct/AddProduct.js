@@ -1,20 +1,25 @@
 import React, {useState} from 'react'
+import './addPstyle.css'
 
 const AddProduct = ({onAdd}) => {
-    const [title, setTitle] = useState('')
-
+    const [prod, setProd] = useState('')
     const submitForm = (e) => {
-        e.preventDefault()
-        onAdd({title})
-
-        setTitle('')
+      e.preventDefault()
+      onAdd({prod})
+      
+    
+        setProd('')
     }
 
 
   return (
     <div>
-      <form onSubmit={submitForm}>
-        <input type='text' placeholder='title' value={title} onChange={(e)=> setTitle(e.target.value)} />
+      <form className='form' onSubmit={submitForm}>
+        <input type='text' placeholder='The Author of book' value={prod} onChange={(e)=> setProd(e.target.value)} />
+        <label></label>
+        <input type='text' placeholder='Book Name' value={prod} onChange={(e)=> setProd(e.target.value)} />
+        <label></label>
+        <input type='text' placeholder='The best quote you remember' value={prod} onChange={(e)=> setProd(e.target.value)} />
         <button type="submit">Add</button>
       </form>
     </div>

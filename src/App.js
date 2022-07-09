@@ -24,10 +24,10 @@ function App() {
     }
 ])
 
-const addProduct = (name)=>{
+const addProduct = (name,author,quote)=>{
   const randomId = Math.floor(Math.random()*10000)
 
-  const newProduct = {randomId, ...name}
+  const newProduct = {randomId,name,author, ...quote}
 
   setProducts([...products, newProduct])
 }

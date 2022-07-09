@@ -1,0 +1,20 @@
+.form{
+    margin: auto;
+    width: 230px;
+    padding: 3px 20px;
+    background-color: rgb(245, 197, 134);
+
+}
+input{
+    border: none;
+    background: none;
+    border-bottom: 1px solid red;
+}
+input:focus{
+    outline: none;
+    background-color: antiquewhite;
+    /* color: antiquewhite; */
+}
+input:focus::placeholder{
+    color: antiquewhite;
+}

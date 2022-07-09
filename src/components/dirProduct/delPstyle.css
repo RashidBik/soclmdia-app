@@ -1,0 +1,14 @@
+.box{
+    margin: auto;
+    margin-top: 20px;
+    padding-bottom: 40px;
+    border-radius: 8px;
+    width: 230px;
+    padding: 20px 5px;
+    background-color: antiquewhite;
+
+}
+
+.btn{
+    /* float: right; */
+}
