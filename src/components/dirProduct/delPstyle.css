@@ -1,6 +1,6 @@
 .contain{
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
 }
 .box{
     margin: 20px auto;
@@ -9,7 +9,8 @@
     padding: 8px 5px;
     padding-top: 10px;
     background-color: antiquewhite;
-
+    border: 10px groove rgb(202, 173, 124);
+    
 }
 
 .btn{

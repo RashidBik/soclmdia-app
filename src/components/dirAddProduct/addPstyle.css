@@ -27,4 +27,5 @@ input:focus::placeholder{
 }
 button{
     margin-top: 10px;
+    color:rgb(94, 24, 24);
 }

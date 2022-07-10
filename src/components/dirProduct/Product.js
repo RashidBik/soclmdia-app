@@ -5,9 +5,9 @@ import './delPstyle.css'
     return (
     <div className='contain'>
       <div className='box'>
-          <span>{` ${products.author}`}</span>
+          <p className='author'>{`@_ ${products.author}`}</p>
           <h1>{products.name}</h1>
-          <div>{products.qoute}</div>
+          <div>{`"${products.qoute}"`}</div>
           <button className='btn' onClick={()=>onDelete(products.id)}>Delete</button>
       </div>
     </div>
