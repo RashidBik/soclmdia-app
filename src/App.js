@@ -1,38 +1,36 @@
-import {useState} from 'react'
+import {useState,useEffect} from 'react'
 import React from "react";
 import AddProduct from './components/dirAddProduct/AddProduct';
 import ProductList from './components/dirProductList/ProductList'
 function App() {
-  const [products, setProducts] = useState([
-    {
-        id: 1,
-        name: 'Human',
-        author: 'Brayan Trisi',
-        qoute: 'go as far as you can see'
-    },
-    {
-        id: 2,
-        name: 'Herman Hiss',
-        author: 'Paul kolo',
-        qoute: 'try anything'
-    },
-    {
-        id: 3,
-        name: 'badfox',
-        author: 'Rashid Bik',
-        qoute: 'I never forget this if i do but this cant!'
-    }
-])
+  const [products, setProducts] = useState([])
 
-const addProduct = (name,author,quote)=>{
-  const randomId = Math.floor(Math.random()*10000)
+useEffect(()=>{
+  const sendReq = async() =>{
+    const resp = await fetch('http://localhost:8000/products')
+    const respData = await (await resp).json()
+    setProducts(respData)
 
-  const newProduct = {randomId,name,author, ...quote}
+  }
+  sendReq()
+},[])
 
-  setProducts([...products, newProduct])
+const addProduct = async (props)=>{
+  // const randomId = Math.floor(Math.random()*10000)
+   const response = await fetch(`http://localhost:8000/products`,{
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(props)
+    })
+
+    const responseData = await response.json()
+  // const newProduct = {randomId,name,author, ...quote}
+
+  setProducts([...products, responseData])
 }
 
-const deleteProduct = (id) =>{
+const deleteProduct = async (id) =>{
+ await fetch(`http://localhost:8000/products/${id}`,{method: 'DELETE'})
 setProducts(products.filter((item) => item.id !== id))
 }
   return (
