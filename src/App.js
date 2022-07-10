@@ -35,6 +35,7 @@ setProducts(products.filter((item) => item.id !== id))
 }
   return (
     <div className='container'>
+      <div className='title'>The books I have read</div>
       <AddProduct onAdd={addProduct} />
       <ProductList products={products} onDelete={deleteProduct}  />
     </div>

@@ -1,7 +1,13 @@
+.header{
+    width: 100%;
+    position: fixed;
+    /* padding:; */
+    bottom: 0;
+    
+}
 .form{
-    margin: auto;
-    width: 230px;
-    padding: 3px 20px;
+    width: 100%;
+    padding: 8px 20px;
     background-color: rgb(245, 197, 134);
 
 }
@@ -9,6 +15,7 @@ input{
     border: none;
     background: none;
     border-bottom: 1px solid red;
+    margin: 2px;
 }
 input:focus{
     outline: none;
@@ -17,4 +24,7 @@ input:focus{
 }
 input:focus::placeholder{
     color: antiquewhite;
+}
+button{
+    margin-top: 10px;
 }

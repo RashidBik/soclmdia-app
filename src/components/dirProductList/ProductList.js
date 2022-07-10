@@ -1,4 +1,5 @@
 import Product from '../dirProduct/Product'
+import '../../index.css'
 
 const ProductList = ({products, onDelete}) => {
   return (

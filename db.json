@@ -1,19 +1,15 @@
 {
   "products": [
     {
-      "id": 2,
-      "name": "Herman Hiss",
-      "author": "Paul kolo",
-      "qoute": "try anything"
-    },
-    {
       "id": 3,
       "name": "badfox",
       "author": "Rashid Bik",
       "qoute": "I never forget this if i do but this cant!"
     },
     {
-      "prod": "jeryco",
+      "author": "Asif Herm",
+      "name": "Irland ",
+      "qoute": "live greener in life",
       "id": 4
     }
   ]

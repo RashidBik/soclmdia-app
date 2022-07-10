@@ -6,10 +6,20 @@ body{
     background-color: aliceblue;
     text-align: center;
     font-size: large;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 90px;
 }
 
 .container{
    margin: auto;
+   display: flex;
+   flex-direction: column;
    
 }
+.title{
+    background-color:rgb(32 33 36);
+    font-size: x-large;
+    color: aliceblue;
 
+}
